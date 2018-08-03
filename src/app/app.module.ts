@@ -8,6 +8,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { TweetsComponent } from './components/tweets/tweets.component';
 import { WhoFollowComponent } from './components/who-follow/who-follow.component';
+import { TweetsService } from './services/tweets.service';
+import { FormsModule } from '../../node_modules/@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { WhoFollowComponent } from './components/who-follow/who-follow.component
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TweetsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
