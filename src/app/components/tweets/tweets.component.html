@@ -1,26 +1,37 @@
 <div class="input-group input-group-sm mb-2 mt-3">
   <img class="mr-1 imagen-tweet" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" />
-  <input 
-    type="text" 
-    class="form-control" 
-    aria-label="whats happening" 
-    aria-describedby="inputGroup-sizing-sm" 
-    placeholder="What's happening?"
-    [(ngModel)]= "content"/>
+  <input type="text" class="form-control" aria-label="whats happening" aria-describedby="inputGroup-sizing-sm" placeholder="What's happening?"
+    [(ngModel)]="content"/>
 </div>
 <div class="row float-right mr-1">
   <button class="round" (click)='addTweet(content)'>Tweet</button>
 </div>
 <div class="row mt-5">
   <!-- tweet -->
-  <div class="col-12 pt-3 border-top" *ngFor="let t of tweets">
+  <div class="col-12 pt-3 mb-2 border-top list-group-item-action" *ngFor="let t of tweets.slice().reverse()">
     <div class="row">
       <div class="col-1">
         <img class="imagen-tweet-list" src="{{ t.user.avatar }}" />
       </div>
       <div class="col-11 pl-4">
-        <a class="font-weight-bold">{{ t.user.name }}</a>
-        <p>{{ t.content }}</p>
+        <div class="row secondary-text">
+          <div class="col-11">
+            <a class="font-weight-bold text-body">{{ t.user.name }}
+              <a class="text-secondary font-weight-light">@{{t.user.name}} . 2s</a>
+            </a>
+          </div>
+          <div class="col-1 pl-0">
+            <a class="mr-2 font-weight-bold text-secondary">
+              <fa class="btn pt-0" name="angle-down"></fa>
+            </a>
+          </div>
+        </div>
+
+        <p class="mb-1">{{ t.content }}</p>
+        <fa class="mr-4 text-secondary btn" name="comment"> </fa>
+        <fa class="mr-4 text-secondary btn" name="retweet"></fa>
+        <fa class="mr-4 text-secondary btn" name="heart"></fa>
+        <fa class="mr-4 text-secondary btn" name="envelope"></fa>
       </div>
     </div>
   </div>
