@@ -1,0 +1,10 @@
+.detail{
+    font-size: 12px;
+}
+
+.profile-photo{
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
