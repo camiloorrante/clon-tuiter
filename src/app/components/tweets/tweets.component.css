@@ -1,0 +1,24 @@
+.imagen-tweet{
+    border-radius: 50%;
+    height: 30px;
+}
+.imagen-tweet-list{
+    border-radius: 50%;
+    height: 50px;
+}
+.round{
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    background: transparent;
+    border: 1px solid #1da1f2;
+    color: #fff;
+    background-color: #1da1f2;
+}
